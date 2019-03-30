@@ -11,9 +11,9 @@ namespace Revisao
             {
                 for (int j = 0; j < 11; j++)
                 {
-                    Console.WriteLine("{0} x {1} = {2}", i, j, i*j);
+                    Console.WriteLine("\t{0} x {1} = {2}", i, j, i*j);
                 }
-                Console.WriteLine("---------------------------------");
+                Console.WriteLine("\t================================");
             }
         }
     }

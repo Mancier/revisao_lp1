@@ -18,6 +18,7 @@ namespace Revisao
             activity_one at1 = new activity_one(); //Invocando ativity_one para dentro de Program.Main()
             activity_two at2 = new activity_two(); //Invocando ativity_two para dentro de Program.Main()
             activity_three at3 = new activity_three(); //Invocando ativity_two para dentro de Program.Main()
+            activity_four at4 = new activity_four(); //Invocando ativity_two para dentro de Program.Main()
 
             /*
              * Aprensentando um menu para o cliente
@@ -44,6 +45,9 @@ namespace Revisao
                         break;
                     case 3:
                         at3.startingAtivityThree();
+                        break;
+                    case 4:
+                        at4.startingAtivityFour();
                         break;
                     default:
                         Console.WriteLine("Opção Inválida");

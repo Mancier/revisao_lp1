@@ -5,7 +5,7 @@ namespace Revisao
 {
     public class activity_one
     {
-        public int startingActiveOne()
+        public void startingActiveOne()
         {
             float salary = 0, securitySocial = 0, incomeTax = 0;
             Console.WriteLine("==>> Cálculo de Salário <<==");
@@ -20,12 +20,14 @@ namespace Revisao
             /*
              * Exibindo os valores das taxas
              */
+            Console.WriteLine("\t================================");
             Console.WriteLine("\tSalario Bruto: {0}", salary);
             Console.WriteLine("\tDesconto Securidade Social: {0}", securitySocial.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("\tDesconto Imposto de Renda: {0}", incomeTax.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("\t=====================================");
+            Console.WriteLine("\t---------------------------------");
             Console.WriteLine("\tSalario Liquido: {0}", (salary-(securitySocial+incomeTax)).ToString("F2", CultureInfo.InvariantCulture));
-            return 1;
+            Console.WriteLine("\t================================");
+
         }
 
         /*

@@ -8,7 +8,7 @@ namespace Revisao
         {
             // Variaveis locais ==> Main
             int selected = 0;
-            char shouldRepeat;
+            int shouldRepeat = 0;
 
             /*
              * Invocando e estanciando cada atividade da lista para ser usada no código
@@ -17,15 +17,16 @@ namespace Revisao
              */
             activity_one at1 = new activity_one(); //Invocando ativity_one para dentro de Program.Main()
             activity_two at2 = new activity_two(); //Invocando ativity_two para dentro de Program.Main()
-            activity_three at3 = new activity_three(); //Invocando ativity_two para dentro de Program.Main()
-            activity_four at4 = new activity_four(); //Invocando ativity_two para dentro de Program.Main()
+            activity_three at3 = new activity_three(); //Invocando ativity_three para dentro de Program.Main()
+            activity_four at4 = new activity_four(); //Invocando ativity_four para dentro de Program.Main()
+            activity_five at5 = new activity_five(); //Invocando ativity_five para dentro de Program.Main()
 
             /*
              * Aprensentando um menu para o cliente
              */
             do{
                 Console.WriteLine("Selecione uma das atividades abaixo para ser executada");
-                for (int i = 0; i < 10; i++) //Preguiça de programador
+                for (int i = 0; i < 6; i++) //Preguiça de programador
                 {
                     Console.WriteLine("\t{0} - Atividade {0}", i + 1);
                 }
@@ -49,17 +50,20 @@ namespace Revisao
                     case 4:
                         at4.startingAtivityFour();
                         break;
+                    case 5:
+                        at5.startingActivityFive();
+                        break;
                     default:
                         Console.WriteLine("Opção Inválida");
                         break;
                 }
 
-                do{
-                    Console.Write("Deseja repetir(Y/N): ");
-                    char.TryParse(Console.ReadLine(), out shouldRepeat);
-                    shouldRepeat = char.ToLower(shouldRepeat);
-                } while (shouldRepeat != 'y' || shouldRepeat != 'n');
-            } while (shouldRepeat == 'y');
+                while (true){
+                    Console.Write("Deseja sair(1/0): ");
+                    shouldRepeat = int.Parse(Console.ReadLine());
+                    if (shouldRepeat == 1) break;
+                }
+            } while (shouldRepeat == 0);
         } 
     }
 }

@@ -38,8 +38,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="activity_five.cs" />
     <Compile Include="activity_four.cs" />
     <Compile Include="activity_one.cs" />
+    <Compile Include="activity_six.cs" />
     <Compile Include="activity_three.cs" />
     <Compile Include="activity_two.cs" />
     <Compile Include="Program.cs" />
